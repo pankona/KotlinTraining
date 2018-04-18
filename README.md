@@ -9,6 +9,7 @@ Kotlin 研修のためのボイラープレートです。
   * Kotlin サポートを有効に
   * API レベルは Android 6.0 以降 (`minSdkLevel 23`)を指定
   * 初期アクティビティとして Blank Activity を指定
+* 初期 Activity は削除し、Sample クラス、SampleTest クラスを追加
 
 ## 本リポジトリの意図
 
@@ -26,7 +27,7 @@ Kotlin 研修のためのボイラープレートです。
 
 ## 補足
 
-* Kotlin の導入時には、Android SDK の機能は使わない予定
+* Kotlin の言語機能を学ぶ目的で用いるため、Android SDK の機能は使わない予定
 * 「クラスを作る + テストで駆動する」にて、Kotlin の言語機能に触れていく
 * なんかおかしくなったらメンター呼んでください
 
