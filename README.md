@@ -1,6 +1,7 @@
 # Kotlin Training
 
-Kotlin 研修のためのボイラープレートです。
+Kotlin 研修のためのボイラープレートです。  
+* 研修資料は https://access-company.github.io/kotlin_intro/ を参照
 
 ## 本リポジトリの内容
 
