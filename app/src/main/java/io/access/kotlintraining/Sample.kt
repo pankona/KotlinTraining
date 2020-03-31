@@ -5,3 +5,6 @@ fun welcome() {
 }
 
 // TODO: declare hello function
+fun main(args: Array<String>) {
+    println("Hello world")
+}
