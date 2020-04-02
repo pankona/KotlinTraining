@@ -33,3 +33,14 @@ class FizzBuzzTest {
         assertEquals("Buzz", fizzBuzzForTest(35))
     }
 }
+
+class LeapYearTest {
+    @Test
+    fun testIsLeapYear() {
+        assertEquals(true, isLeapYear(1600))
+        assertEquals(false, isLeapYear(1700))
+        assertEquals(false, isLeapYear(2500))
+        assertEquals(true, isLeapYear(72))
+        assertEquals(false, isLeapYear(71))
+    }
+}
