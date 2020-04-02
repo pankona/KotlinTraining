@@ -44,3 +44,14 @@ class LeapYearTest {
         assertEquals(false, isLeapYear(71))
     }
 }
+
+class TestPower{
+    @Test
+    fun testPower(){
+        assertEquals(100, power(10,2))
+        assertEquals(1000, power(10,3))
+        assertEquals(625, power(25,2))
+        assertEquals(15625, power(25,3))
+        assertEquals(1, power(1,1))
+    }
+}
