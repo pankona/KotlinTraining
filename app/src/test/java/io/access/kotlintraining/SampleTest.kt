@@ -55,3 +55,25 @@ class TestPower{
         assertEquals(1, power(1,1))
     }
 }
+
+//ここからexercise(2)の内容
+class TestOddOrEven{
+    @Test
+    fun testisOdd(){
+        assertEquals(false,5.isOdd())
+        assertEquals(true,4.isOdd())
+        assertEquals(true,2.isOdd())
+        assertEquals(false,109573.isOdd())
+        assertEquals(true,2990.isOdd())
+    }
+
+    @Test
+    fun testisEven(){
+        assertEquals(false,78.isEven())
+        assertEquals(true,1.isEven())
+        assertEquals(true,399.isEven())
+        assertEquals(false,149328.isEven())
+        assertEquals(false,3952832.isEven())
+    }
+
+}

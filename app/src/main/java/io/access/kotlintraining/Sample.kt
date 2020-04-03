@@ -14,10 +14,12 @@ fun main(args: Array<String>) {
 
     //Fizz Buzz
     fizzBuzz()
-    print("\n\n\n")
     print(isLeapYear(2000))
-    print("\n\n\n")
     print(power(10,10))
+    print("\n\n")
+    print(5.isOdd())
+    print("\n")
+    print(5.isEven())
 }
 
 fun fizzBuzz() {
@@ -66,4 +68,13 @@ fun power(a: Int, n: Int): Long {
     val nDouble = n.toDouble()
 
     return aDouble.pow(nDouble).toLong()
+}
+
+//ここからexercise(2)の内容
+fun Int.isOdd():Boolean {
+    return this % 2 == 0
+}
+
+fun Int.isEven():Boolean {
+    return this % 2 != 0
 }
