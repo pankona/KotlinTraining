@@ -1,6 +1,5 @@
 package io.access.kotlintraining
 
-import java.util.*
 import kotlin.math.pow
 
 fun welcome() {
@@ -58,16 +57,17 @@ fun main(args: Array<String>) {
 
 }
 
+//fizzBuzz
 fun fizzBuzz() {
-        for (i in 1..100) {
+    for (i in 1..100) {
 
-            when {
-                i % 15 == 0 -> println("FizzBuzz")
-                i % 5 == 0 -> println("Buzz")
-                i % 3 == 0 -> println("Fizz")
-                else -> println("$i")
-            }
+        when {
+            i % 15 == 0 -> println("FizzBuzz")
+            i % 5 == 0 -> println("Buzz")
+            i % 3 == 0 -> println("Fizz")
+            else -> println("$i")
         }
+    }
 }
 
 fun fizzBuzzForTest(i: Int): String {
@@ -94,6 +94,7 @@ fun isLeapYear(y: Int): Boolean {
     return true
 }
 
+//累乗
 fun power(a: Int, n: Int): Long {
     if (a < 0 || n < 0) {
         println("inputs must be positive. return 0")
@@ -106,74 +107,16 @@ fun power(a: Int, n: Int): Long {
     return aDouble.pow(nDouble).toLong()
 }
 
-//ここからexercise(2)の内容
 //奇数か偶数か
-fun Int.isOdd():Boolean {
+fun Int.isOdd(): Boolean {
     return this % 2 == 0
 }
 
-fun Int.isEven():Boolean {
+fun Int.isEven(): Boolean {
     return this % 2 != 0
 }
 
-//n 面のサイコロ
-class Dice(n: Int) {
-    private var numberOfTimes: Int = 0
-
-    private val diceFace = n
-
-    fun roll(): Int {
-        numberOfTimes += 1
-        val random = Random()
-        return if (numberOfTimes < 100) {
-            random.nextInt(diceFace) + 1 // 1〜n までの範囲の値がランダムで返る
-        } else {
-            throw Exception("I was broken")
-        }
-    }
-}
-
-//呼び出した回数をカウントする
-class MyCustomClass {
-    var counter: Int = 0
-    var propertyWithCounter: Int = 0
-    /* TODO: ここにカスタムセッターを書く */
-    set(value) {
-        // 値は field変数に格納する
-        field = value
-        counter ++
-    }
-}
-
-//世界のナベアツ
-class NabeAtsu {
-    // TODO: 実装する
-    var n: Int = 0
-
-    fun next(): String {
-        // TODO: 実装する
-        n++
-        val isInclude = n.toString().contains("3")
-        return if (n % 3 == 0 || isInclude) {
-            "aho"
-        } else "$n"
-    }
-}
-
-//ここからexercise(3)の内容
-class Client (val personalInfo: PersonalInfo?)
-class PersonalInfo (val email: String?)
-
-interface Mailer {
-    fun sendMessage(email: String, message: String)
-}
-
-class CosmosMailer: Mailer {
-    override fun sendMessage(email: String, message: String){
-        println("To: $email\nmessage: $message")
-    }
-}
-
+//ヌルと戦うJavaプログラマーにKotlinを教えよう！
 fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
     if (client == null || message == null) {
         return

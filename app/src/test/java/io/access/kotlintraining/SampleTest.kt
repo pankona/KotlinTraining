@@ -45,35 +45,35 @@ class LeapYearTest {
     }
 }
 
-class TestPower{
+class TestPower {
     @Test
-    fun testPower(){
-        assertEquals(100, power(10,2))
-        assertEquals(1000, power(10,3))
-        assertEquals(625, power(25,2))
-        assertEquals(15625, power(25,3))
-        assertEquals(1, power(1,1))
+    fun testPower() {
+        assertEquals(100, power(10, 2))
+        assertEquals(1000, power(10, 3))
+        assertEquals(625, power(25, 2))
+        assertEquals(15625, power(25, 3))
+        assertEquals(1, power(1, 1))
     }
 }
 
 //ここからexercise(2)の内容
-class TestOddOrEven{
+class TestOddOrEven {
     @Test
-    fun testisOdd(){
-        assertEquals(false,5.isOdd())
-        assertEquals(true,4.isOdd())
-        assertEquals(true,2.isOdd())
-        assertEquals(false,109573.isOdd())
-        assertEquals(true,2990.isOdd())
+    fun testisOdd() {
+        assertEquals(false, 5.isOdd())
+        assertEquals(true, 4.isOdd())
+        assertEquals(true, 2.isOdd())
+        assertEquals(false, 109573.isOdd())
+        assertEquals(true, 2990.isOdd())
     }
 
     @Test
-    fun testisEven(){
-        assertEquals(false,78.isEven())
-        assertEquals(true,1.isEven())
-        assertEquals(true,399.isEven())
-        assertEquals(false,149328.isEven())
-        assertEquals(false,3952832.isEven())
+    fun testisEven() {
+        assertEquals(false, 78.isEven())
+        assertEquals(true, 1.isEven())
+        assertEquals(true, 399.isEven())
+        assertEquals(false, 149328.isEven())
+        assertEquals(false, 3952832.isEven())
     }
 
 }
