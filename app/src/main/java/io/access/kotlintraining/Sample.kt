@@ -23,12 +23,20 @@ fun main(args: Array<String>) {
     print(5.isEven())
     print("\n\n")
 
+    //n面のサイコロ
     val d = Dice(16)
-
     print("Dice roll start.\n")
-    for (i in 1..100) {
+    for (i in 1..99) {
         println(d.roll())
     }
+    print("\n\n")
+
+    //呼び出された回数をカウントする
+    val p = MyCustomClass()
+    p.propertyWithCounter = 123
+    p.propertyWithCounter = 456
+    p.propertyWithCounter = 789
+    println(p.counter) // 3
 }
 
 fun fizzBuzz() {
@@ -103,5 +111,17 @@ class Dice(n: Int) {
         } else {
             throw Exception("I was broken")
         }
+    }
+}
+
+//呼び出した回数をカウントする
+class MyCustomClass {
+    var counter: Int = 0
+    var propertyWithCounter: Int = 0
+    /* TODO: ここにカスタムセッターを書く */
+    set(value) {
+        // 値は field変数に格納する
+        field = value
+        counter ++
     }
 }
