@@ -55,6 +55,7 @@ fun main(args: Array<String>) {
             mailer
     )
 
+    print("以上が解答となります。みなさん研修頑張ってください^^")
 }
 
 //fizzBuzz
