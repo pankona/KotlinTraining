@@ -44,6 +44,18 @@ fun main(args: Array<String>) {
     for (i in 1..100) {
         println(n.next())
     }
+
+    print("\n\n")
+    //ヌルと戦うJavaプログラマーにKotlinを教えよう！
+    val personalInfo = PersonalInfo("antonio@abc-company.com")
+    val client = Client(personalInfo)
+    val mailer: Mailer = CosmosMailer()
+    sendMessageToClient(
+            client,
+            "Hello, Antonio!",
+            mailer
+    )
+
 }
 
 fun fizzBuzz() {
@@ -146,4 +158,29 @@ class NabeAtsu {
             "aho"
         } else "$n"
     }
+}
+
+//ここからexercise(3)の内容
+class Client (val personalInfo: PersonalInfo?)
+class PersonalInfo (val email: String?)
+
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
+
+class CosmosMailer: Mailer {
+    override fun sendMessage(email: String, message: String){
+        println("To: $email\nmessage: $message")
+    }
+}
+
+fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
+    if (client == null || message == null) {
+        return
+    }
+
+    val personalInfo: PersonalInfo? = client.personalInfo ?: return
+    val email: String = personalInfo?.email ?: return
+
+    mailer.sendMessage(email, message)
 }
