@@ -37,6 +37,13 @@ fun main(args: Array<String>) {
     p.propertyWithCounter = 456
     p.propertyWithCounter = 789
     println(p.counter) // 3
+    print("\n\n")
+
+    //世界のナベアツ
+    val n = NabeAtsu()
+    for (i in 1..100) {
+        println(n.next())
+    }
 }
 
 fun fizzBuzz() {
@@ -123,5 +130,20 @@ class MyCustomClass {
         // 値は field変数に格納する
         field = value
         counter ++
+    }
+}
+
+//世界のナベアツ
+class NabeAtsu {
+    // TODO: 実装する
+    var n: Int = 0
+
+    fun next(): String {
+        // TODO: 実装する
+        n++
+        val isInclude = n.toString().contains("3")
+        return if (n % 3 == 0 || isInclude) {
+            "aho"
+        } else "$n"
     }
 }
